@@ -10,12 +10,12 @@ export const useSwrFetch = (subUrl, options) => {
     fetch(apiURL, options).then((res) => res.json());
 
   // If GET method
-  if (options.method.toLowerCase() == "get") {
-    //   const { data, error, isLoading } = useSWR(url, (apiURL: string) =>
-    //   fetch(apiURL, options).then((res) => res.json())
-    // );
-    return useSWR(url, fetcher);
-  }
+  // if (options.method.toLowerCase() == "get") {
+  //   //   const { data, error, isLoading } = useSWR(url, (apiURL: string) =>
+  //   //   fetch(apiURL, options).then((res) => res.json())
+  //   // );
+  // }
+  return useSWR(url, fetcher);
 
   // const { data, error, isLoading } = useSWR(url, (apiURL: string) =>
   //   fetch(apiURL, options).then((res) => res.json())

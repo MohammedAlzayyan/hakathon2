@@ -51,7 +51,7 @@ export const Bank = ({ selectedBalance }: any) => {
     // if (selectedBank) {
     //   setSelectedBank(() => selectedBank.data.recipients[0]);
     // }
-  }, []);
+  });
 
   return (
     <div>

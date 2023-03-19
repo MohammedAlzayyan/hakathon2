@@ -19,7 +19,7 @@ export const useRouterEvents = ({
       router.events.off("routeChangeComplete", onRouteChangeComplete);
       router.events.off("routeChangeError", onRouteChangeError);
     };
-  }, []);
+  });
 
   return {};
 };

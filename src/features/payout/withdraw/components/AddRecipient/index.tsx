@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Button, Input, Modal } from "components";
-import { useForm } from "react-hook-form";
+import useForm from "lib/react-hook-form";
 import { TransferCard } from "features/payout";
 import { getFieldHelperText } from "utils";
 import { API_SERVICES_URLS } from "data";
 import { useSwrMutationFetch, useModal, useSwrFetch } from "hooks";
 import ConfirmPayout from "../ConfirmPayout";
 
-export const AddRecipient = ({ closeModal, handleRecipientAdd }) => {
+export const AddRecipient = ({ closeModal, handleRecipientAdd }: any) => {
   const {
     register,
     handleSubmit,
@@ -28,7 +28,7 @@ export const AddRecipient = ({ closeModal, handleRecipientAdd }) => {
   );
   const modalVerifyCode = useModal();
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: any) => {
     trigger(data).then((a) => {
       console.log(a);
       reset();
